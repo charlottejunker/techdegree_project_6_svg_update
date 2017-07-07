@@ -5,7 +5,7 @@ body {
   font-family: 'Roboto Slab', serif;
   font-weight: 300;
   color: #111;
-  background: url('images/background.png') #edeff0;
+  background: url('svgs/background.svg') #edeff0;
 }
 
 #container {
@@ -26,9 +26,6 @@ a {
   color: #39add1;
   font-weight: 700;
   }
-  a:hover {
-    color: #111;
-  }
 
 header {
   padding-top: 10px;
@@ -42,13 +39,44 @@ header {
     margin-right: 20px;
   }
 
-  header nav ul li a img {
+  header nav ul li a svg {
     height: 13px;
   }
 
   header h1 {
     line-height: 1em;
   }
+
+  .nav svg {
+    transform-origin: 50% 50%;
+  }
+
+  .nav:hover svg{
+    transform: scale(1.5);
+  }
+
+  .nav:hover * {
+    color: #EAAA7F;
+    fill: #EAAA7F;
+  }
+
+  .nav {
+    transition: transform .2s ease-in;
+  }
+
+#name {
+  color: #EAAA7F;
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+#logo {
+  width: 140px;
+}
+
+#logo-text {
+  opacity: 0;
+}
 
 main {
   padding-top: 50px;
@@ -64,8 +92,8 @@ main {
       color: #ba8058;
       margin-right: 20px;
     }
-      main li img {
-        margin-bottom: 15px;
+      main li svg {
+        margin: 15px;
       }
       main li span {
         margin-left: -40px;
@@ -74,9 +102,61 @@ main {
         margin-right: 0;
       }
 
+.dogs {
+  width: 170px;
+}
+
 footer {
   width: 100%;
   margin-top: 100px;
   padding-bottom: 30px;
   color: #ba8058;
+}
+
+/*svgs*/
+
+.st0{
+  fill:#BA8058;
+}
+.st1 {
+  fill:#EAAA7F;
+}
+.st2 {
+  fill:#F4C6A6;
+}
+.st3 {
+  fill:#39ADD1;
+}
+
+.st4 {
+  fill:#FBFEFF;
+}
+
+.st5 {
+  fill:#2D3339;
+}
+
+.st6 {
+  fill:#844B24;
+}
+
+.st7 {
+  fill:#52595F;
+}
+
+.st8 {
+  fill:#222;
+}
+
+
+/*media queries*/
+
+@media screen and (min-width: 425px) {
+  #logo-text {
+    opacity: 1;
+  }
+
+  #name {
+    display: none;
+  }
 }
